@@ -1,0 +1,23 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=localhost;Database=pdfportal;Username=postgres;Password=123;SSL Mode=Disable"
+  },
+  "Jwt": {
+    "Key": "YOUR_JWT_SECRET_KEY_AT_LEAST_32_CHARACTERS_LONG",
+    "Issuer": "PdfPortal",
+    "Audience": "PdfPortalUsers",
+    "ExpiryMinutes": 60
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "OpenAI": {
+    "ApiKey": "YOUR_OPENAI_API_KEY_HERE",
+    "Model": "gpt-4-turbo-preview"
+  }
+}
+
