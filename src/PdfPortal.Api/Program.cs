@@ -143,6 +143,10 @@ using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<PdfPortalDbContext>();
     context.Database.EnsureCreated();
+    
+    // Seed default admin user
+    await DatabaseSeeder.SeedDefaultAdminAsync(context);
+    
     // NOTE: Removed local storage folder creation; PDFs are stored in Cloudflare R2.
 }
 
